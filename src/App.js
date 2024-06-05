@@ -29,7 +29,8 @@ import SubjectDemo from './component/branch_sem_sub/SubjectDemo';
 import axios from "axios";
 
 function App() {
-  axios.defaults.baseURL = "https://nodebachend.onrender.com";
+  // axios.defaults.baseURL = "https://nodebachend.onrender.com";
+  axios.defaults.baseURL = "https://qr-node-stzo.onrender.com";
   // axios.defaults.baseURL = "http://localhost:3000";
   return (
     <div className="App">

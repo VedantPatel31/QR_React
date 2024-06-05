@@ -22,8 +22,8 @@ export default function QRDemo(props) {
     const [back, setBack] = useState('#FFFFFF');
     const [fore, setFore] = useState('#000000');
     const [size, setSize] = useState(256);
-    const socket = io("http://localhost:3000");
-    // const socket = io("https://nodebachend.onrender.com");
+    // const socket = io("http://localhost:3000");
+    const socket = io("https://nodebachend.onrender.com");
 
 
     const dispatch = useDispatch()
