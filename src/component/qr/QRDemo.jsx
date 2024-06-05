@@ -202,7 +202,7 @@ export default function QRDemo(props) {
                         <div className="my-qr-text-card" >
                             <div className="text-center">
                                 {/* <h1 className="h4 text-gray-900 mb-4">Attendace : {state}</h1> */}
-                                {/* <h1 className="h4 text-gray-900 mb-4">Attendace : {students.length}</h1> */}
+                                <h1 className="h4 text-gray-900 mb-4">Attendace : {students.length}</h1>
                             </div>
                             <form onSubmit={handleSubmit(sendMessage)}>
                                 <div>
@@ -216,7 +216,7 @@ export default function QRDemo(props) {
                             <button onClick={() => dispatch(totalAttendance({ attendance: 1 }))}>Attend</button>
                             <div>
                                 <div>
-                                    {/* <h1>Attendance : {counter}</h1> */}
+                                    <h1>Attendance : {counter}</h1>
                                 </div>
                                 <center>
                                     {value && (
