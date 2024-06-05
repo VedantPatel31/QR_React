@@ -44,9 +44,9 @@ export default function QRDemo(props) {
         // const socket = io("http://localhost:3000");
         // console.log("socket : ",socket);
 
-        // getBranches();
-        // getSem();
-        // getSubject();
+        getBranches();
+        getSem();
+        getSubject();
         socket.on("abc", (data) => {
             console.log("data : ", data);
             setcounter(data)
