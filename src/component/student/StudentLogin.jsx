@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form';
 import validationSchema from '../utils/ValidationSchema';
+import { ToastContainer, toast } from 'react-toastify';
 export default function StudentLogin() {
     const { register, handleSubmit,formState: { errors } } = useForm();
     const [isLoading, setisLoading] = useState(false);
@@ -14,8 +15,18 @@ export default function StudentLogin() {
             const res = await axios.post('/student/login', data);
             setisLoading(false);
             setisDisable(false);
-            console.log(res);
-            console.log("id : ", res.data.data);
+            toast.success('Student added successfully!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+            // console.log(res);
+            // console.log("id : ", res.data.data);
             // console.log("token ",res.data.data);
 
             localStorage.setItem('token', res.data.token);
@@ -29,6 +40,18 @@ export default function StudentLogin() {
     }
     return (
         <div className="container">
+             <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
             {
                 isLoading && (
                     <div className="spinner-border" role="status">

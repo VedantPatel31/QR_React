@@ -23,7 +23,8 @@ export default function QRDemo(props) {
     const [fore, setFore] = useState('#000000');
     const [size, setSize] = useState(256);
     // const socket = io("http://localhost:3000");
-    const socket = io("https://nodebachend.onrender.com");
+    // const socket = io("https://nodebachend.onrender.com");
+    const socket = io("    https://qr-node-stzo.onrender.com");
 
 
     const dispatch = useDispatch()
@@ -56,11 +57,13 @@ export default function QRDemo(props) {
 
 
     const submitHandler = async (data) => {
+        console.log("handle call");
         setuserId(localStorage.getItem("userId"));
         const data1 = {
             data: data,
             facultyId: userId
         }
+        console.log("data : ",data1);
         setisDisable(true);
         setisLoading(true);
         setisStop(false);
@@ -93,6 +96,7 @@ export default function QRDemo(props) {
         console.log(res.data.data);
     }
     const stopQR = async () => {
+        console.log("stop");
         setisLoading(true);
         setisStop(true)
         const data = {
