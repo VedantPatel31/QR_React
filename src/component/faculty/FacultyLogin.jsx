@@ -16,7 +16,7 @@ export default function FacultyLogin() {
     console.log(res.data);
     localStorage.setItem('token', res.data.token);
     localStorage.setItem("userId", res.data.data);
-    toast.success('Student added successfully!', {
+    toast.success('Faculty login successfully!', {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,

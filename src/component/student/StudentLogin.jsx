@@ -15,7 +15,7 @@ export default function StudentLogin() {
             const res = await axios.post('/student/login', data);
             setisLoading(false);
             setisDisable(false);
-            toast.success('Student added successfully!', {
+            toast.success('Student login successfully!', {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
