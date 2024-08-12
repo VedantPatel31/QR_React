@@ -45,7 +45,7 @@ function App() {
       {/* <Navbar4 title="QR Attendance Project" /> */}
       <Routes>
 
-        <Route path='/subjectDemo' element={<SubjectDemo />}></Route>
+        {/* <Route path='/subjectDemo' element={<SubjectDemo />}></Route> */}
         {/* <Route path='/studentRegister' element={<StudentRegister />}></Route>
         <Route path='/studentLogin' element={<StudentLogin />}></Route>
         <Route path='/facultyRegister' element={<FacultyRegister />}></Route>

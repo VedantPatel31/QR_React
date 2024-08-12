@@ -50,7 +50,7 @@ const ViewAtt = (props) => {
         // console.log(sId);
         const res = await axios.post("/attendance/getAll", { sId: sId });
         setstudentAttendance(res.data.data);
-        // console.log("res data : ", res.data.data);
+        console.log("res data : ", res.data.data);
         setisLoading(false);
     }
 
@@ -181,40 +181,6 @@ const ViewAtt = (props) => {
                 >
                 </DataGrid>
             </div>
-            {/* <table className='table table-bordered h4 text-gray-900'>
-                <thead>
-                    <tr>
-                        <th scope='col'>First Name</th>
-                        <th scope='col'>Last Name</th>
-                        <th scope='col'>Enrollment Number</th>
-                        <th scope='col'>branch</th>
-                        <th scope='col'>Sem</th>
-                        <th scope='col'>Subject</th>
-                        <th scope='col'>Faculty</th>
-                        <th scope='col'>Attendance Status</th>
-                        <th scope='col'>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        studentAttendance?.map((stu) => {
-                            return (
-                                <tr>
-                                    <td>{stu.studentId.firstName}</td>
-                                    <td>{stu.studentId.lastName}</td>
-                                    <td>{stu.studentId.enrollmentNumber}</td>
-                                    <td>{stu.branch.branchName}</td>
-                                    <td>{stu.sem.title}</td>
-                                    <td>{stu.subject.subjectName}</td>
-                                    <td>{stu.facultyId.firstName}</td>
-                                    <td>{stu.attendanceStatus}</td>
-                                    <td>{stu.dateStatus}</td>
-                                </tr>
-                            )
-                        })
-                    }
-                </tbody>
-            </table> */}
         </div>
 
     )
